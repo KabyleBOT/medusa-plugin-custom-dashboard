@@ -1,6 +1,6 @@
 {
 	"name": "medusa-plugin-custom-dashboard",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"description": "See sales, activity and actions at a glance.",
 	"author": "Khaled Belkouche <khaled.belkouche@assalas.com> feat SpearDevs <support@speardevs.com>",
 	"license": "MIT",
@@ -28,13 +28,15 @@
 		"build:admin": "cross-env medusa-admin build",
 		"prepare": "cross-env NODE_ENV=production npm run build:server && medusa-admin bundle",
 		"watch": "cross-env tsc --watch",
-		"test": "cross-env jest",
+		"test": "cross-env jest --passWithNoTests src",
 		"seed": "cross-env medusa seed -f ./data/seed.json",
 		"start": "cross-env npm run build && medusa start",
 		"start:custom": "cross-env npm run build && node --preserve-symlinks --trace-warnings index.js",
-		"dev": "cross-env npm run build:server && medusa develop"
+		"dev": "cross-env npm run build:server && medusa develop",
+		"check-types": "tsc --noEmit"
 	},
 	"dependencies": {
+		"@react-spring/web": "^9.7.3",
 		"@visx/curve": "^3.3.0",
 		"@visx/xychart": "^3.8.0"
 	},

@@ -23,7 +23,13 @@ Enable [categories](https://docs.medusajs.com/modules/products/categories)
 1\. Run the following command in the directory of the Medusa backend:
 
 ```bash
-npm install medusa-plugin-dashboard
+npm install medusa-plugin-custom-dashboard
+```
+
+OR
+
+```bash
+yarn add medusa-plugin-custom-dashboard
 ```
 
 2\. In `medusa-config.js` add the following at the end of the `plugins` array:
@@ -32,7 +38,7 @@ npm install medusa-plugin-dashboard
 const plugins = [
 	// ...
 	{
-		resolve: `medusa-plugin-dashboard`,
+		resolve: `medusa-plugin-custom-dashboard`,
 		options: {
 			enableUI: true,
 		},

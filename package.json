@@ -36,7 +36,7 @@
 		"check-types": "tsc --noEmit"
 	},
 	"dependencies": {
-		"@react-spring/web": "^9.7.3",
+		"@react-spring/web": "^10.0.4",
 		"@visx/curve": "^3.3.0",
 		"@visx/xychart": "^3.8.0"
 	},
